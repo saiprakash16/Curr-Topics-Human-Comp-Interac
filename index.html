@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Shopping & Banking Security</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Live wallpaper background -->
+  <div class="bg-layer"></div>
+  <div class="bg-orb orb-left"></div>
+  <div class="bg-orb orb-right"></div>
+
+  <header>
+    <h1>Stay Safe Online</h1>
+    <p class="subtitle">Interactive guide to secure online shopping and banking</p>
+    <nav>
+      <button onclick="showSection('home')">Home</button>
+      <button onclick="showSection('lessons')">Lessons</button>
+      <button onclick="showSection('about')">About</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <div class="hero">
+        <div class="hero-text">
+          <div class="pill">🔐 HCI Project · Security Awareness</div>
+          <h2>Learn to Protect Your Money Online</h2>
+          <p>
+            Explore 10 short, focused lessons that explain passwords, phishing,
+            OTP safety, public Wi-Fi risks, and more — all in simple language
+            with a quick check at the end of each lesson.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" onclick="showSection('lessons')">
+              Start Lessons
+            </button>
+            <span class="secondary-text" id="homeProgressText">
+              0 of 10 lessons completed
+            </span>
+          </div>
+        </div>
+        <div class="hero-cards">
+          <div class="hero-card">
+            <h3>🎯 Focused Topics</h3>
+            <p>Each lesson targets one key security concept so it’s easy to remember.</p>
+          </div>
+          <div class="hero-card">
+            <h3>⚡ Quick Quizzes</h3>
+            <p>Answer one question per lesson to confirm your understanding instantly.</p>
+          </div>
+          <div class="hero-card">
+            <h3>👁️ Visual Progress</h3>
+            <p>Completed lessons turn green with a checkmark so you know what’s done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LESSONS LIST -->
+    <section id="lessons" class="section">
+      <div class="section-header">
+        <h2>Lessons</h2>
+        <p id="progressText" class="progress-text">0 of 10 lessons completed</p>
+      </div>
+      <p class="section-desc">
+        Click a lesson card to open it. After you view the lesson and answer the quiz,
+        that lesson will be marked as completed.
+      </p>
+      <div id="lessonsGrid" class="lessons-grid"></div>
+    </section>
+
+    <!-- SINGLE LESSON VIEW -->
+    <section id="lesson-view" class="section">
+      <h2 id="lessonTitle"></h2>
+      <p id="lessonText"></p>
+
+      <div id="quizArea"></div>
+      <p id="quizFeedback" class="feedback"></p>
+
+      <button class="back-btn" onclick="showSection('lessons')">
+        ← Back to Lesson List
+      </button>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About This Project</h2>
+
+      <p class="section-desc">
+        This site was authored and developed by <strong>Sai Prakash Thota</strong>, under the
+        guidance of <strong>Dr. Amer</strong>. It was created as part of the
+        <strong>Curr Topics Human Comp Interac</strong> course project.
+      </p>
+
+      <p class="section-desc">
+        The aim of this website is to help users understand the essential concepts of staying
+        safe while shopping or banking online. The lessons are built to be simple, interactive,
+        and visually appealing so users can learn comfortably.
+      </p>
+
+      <p class="section-desc">
+        The platform includes <strong>10 short tutorials</strong>, each covering one important
+        security concept — such as strong passwords, phishing attacks, secure website
+        identification, OTP protection, safe vs unsafe Wi-Fi, and secure payment practices.
+      </p>
+
+      <p class="section-desc">
+        The interface features a <strong>live animated background</strong>, <strong>glass-effect
+        cards</strong>, and a clean layout that works smoothly on both mobile and desktop
+        devices. A built-in progress system marks completed lessons in green to help users track
+        their progress easily.
+      </p>
+
+      <p class="section-desc">
+        This project applies key HCI principles such as simplicity, user feedback, visual
+        hierarchy, accessibility, and user-centered design — while teaching practical online
+        security skills that are essential in the digital world.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
